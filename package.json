@@ -5,10 +5,20 @@
   "author": "Zac Stringham <zlstringham@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "compile": "electron-webpack",
+    "dev": "electron-webpack dev",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx .",
     "lint:fix": "yarn lint --fix"
   },
+  "dependencies": {
+    "source-map-support": "^0.5.19"
+  },
   "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-builder": "^22.6.1",
+    "electron-webpack": "^2.8.2",
     "eslint": "^6.0.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-config-standard-jsx": "^8.1.0",
@@ -18,7 +28,8 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.4"
+    "lint-staged": "^10.2.4",
+    "webpack": "^4.43.0"
   },
   "husky": {
     "hooks": {
