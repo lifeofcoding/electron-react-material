@@ -3,5 +3,31 @@
   "version": "0.1.0",
   "repository": "git@github.com:zlstringham/electron-react-material",
   "author": "Zac Stringham <zlstringham@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard-jsx": "^8.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js?(x)": [
+      "./node_modules/.bin/eslint"
+    ]
+  }
 }
