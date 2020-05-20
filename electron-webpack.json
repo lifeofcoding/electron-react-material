@@ -3,6 +3,8 @@
     "webpackConfig": "webpack.renderer.config.js"
   },
   "whiteListedModules": [
+    "@material-ui/core",
+    "@material-ui/icons",
     "react-dom"
   ]
 }
