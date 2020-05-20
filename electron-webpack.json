@@ -1,5 +1,8 @@
 {
   "renderer": {
-    "sourceDirectory": null
-  }
+    "webpackConfig": "webpack.renderer.config.js"
+  },
+  "whiteListedModules": [
+    "react-dom"
+  ]
 }

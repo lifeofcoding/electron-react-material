@@ -13,9 +13,14 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "source-map-support": "^0.5.19"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
     "electron": "^9.0.0",
     "electron-builder": "^22.6.1",
     "electron-webpack": "^2.8.2",
